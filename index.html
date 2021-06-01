@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--HERE JS libs-->
+<link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+<!--HERE JS libs-->
+<!-- style sheet -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- end of style sheet -->
+<link rel="stylesheet" href="styles.css">
+
+<title>Geocoding API Demo</title>
+</head>
+  <body>
+  <div class="container">
+    <input type="text" name="lat" id="lat" placeholder="Latitud">
+    <input type="text" name="lng" id="lng" placeholder="Longitud">
+    <input type="submit" onclick="obtenerUbicacion()">
+  </div>
+  <div style="height: 100vh;width: 100vw;" id="mapContainer" class="container-1">
+    <input placeholder="Search for a Place or an Address." type="text" name="search" id="search" value="Berlin, Germany" autocomplete="off" onkeyup="autosuggest(this)" autofocus/>
+    <i class="fa fa-search fa-search-custom" aria-hidden="true"></i>
+    <div class="dropdown">
+      <ul id="list"></ul>
+    </div>
+  </div>
+  
+  <script src="hereApi.js"></script>
+  </body>
+  </html>
